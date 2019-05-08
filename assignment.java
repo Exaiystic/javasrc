@@ -8,15 +8,6 @@ public class assignment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//  TO DO LIST:
-		//  Specify all the subclasses, so that instead of saying etc: WEAPON STATS, it says LASER WEAPON STATS
-		//  Add Display to all subclasses + superclasses, only subclasses need appends though
-		//  Fix bug where primary, secondary, defence and shield function do not display correctly
-		//  There's a bug where you can search any ship, even if unrecognised, and the program still finds it - add it to testing table
-		//  Do work on testing table
-		//  Comment all of the code
-		//  Minimise repeats
-		
 		//  FOR TESTSHIP 1
 		Engine Speeder_Mk1 = new Voyager_Engine("Speeder Mk1", "Hydrogen", 100.0, 10.0, 50.0); 
 		Radar Spy_Mk1 = new Radar("Spy Mk1", 100.0, 5.0, 20);
@@ -31,9 +22,28 @@ public class assignment {
 		//Printing information about testShip
 		System.out.println(testShip.display());
 		
-		//Printing information about testShip2
-		//System.out.println(testShip2.display());
+		//NEW
+		ArrayList<Ship_Superclass> ships = new ArrayList<Ship_Superclass>(); //Putting EVERYTHING into ships array
 		
+		System.out.println();
+		
+		System.out.println("Input the name of the ship:"); //Prompting user for ship nam
+		Scanner shipScan = new Scanner(System.in); //Creating a place for the input to be stores
+		String shipSearch = shipScan.nextLine(); //Getting the input and storing it
+		
+		for (Ship_Superclass s: ships) { //For loop saying "For as long as there are ships in Ship_Superclass
+			if (s.equals(shipSearch)) { //If s is equal to searched ship then do the below:
+				s.display(); //Display the stats of the ship s
+			}
+			break;
+		}
+		
+	}
+
+}
+		
+		//OLD 
+		/*
 		ArrayList<Ship_Superclass> ships = new ArrayList<Ship_Superclass>();
 		//ships.add(testShip);       Not needed for the search to work
 		Scanner scan = new Scanner(System.in);
@@ -46,5 +56,7 @@ public class assignment {
 		}
 		scan.close();
 	}
-
+	
 }
+		*/
+
