@@ -22,27 +22,10 @@ public class assignment {
 		//Printing information about testShip
 		System.out.println(testShip.display());
 		
-		//NEW
-		ArrayList<Ship_Superclass> ships = new ArrayList<Ship_Superclass>(); //Putting EVERYTHING into ships array
-		
-		System.out.println();
-		
-		System.out.println("Input the name of the ship:"); //Prompting user for ship nam
-		Scanner shipScan = new Scanner(System.in); //Creating a place for the input to be stores
-		String shipSearch = shipScan.nextLine(); //Getting the input and storing it
-		
-		for (Ship_Superclass s: ships) { //For loop saying "For as long as there are ships in Ship_Superclass
-			if (s.equals(shipSearch)) { //If s is equal to searched ship then do the below:
-				s.display(); //Display the stats of the ship s
-			}
-			break;
-		}
-		
 	}
 
 }
 		
-		//OLD 
 		/*
 		ArrayList<Ship_Superclass> ships = new ArrayList<Ship_Superclass>();
 		//ships.add(testShip);       Not needed for the search to work
@@ -56,7 +39,7 @@ public class assignment {
 		}
 		scan.close();
 	}
-	
-}
-		*/
 
+}
+
+/*
