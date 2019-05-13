@@ -23,8 +23,8 @@ public class assignment {
 		ships.add(testShip); //Adds testShip to the ships array
 		
 		//User Login
-		Login admin = new Login();
-		admin.getLoginCredentials("admin", "password123");
+		Login admin = new Login(); //Create a new login called admin
+		admin.getLoginCredentials("admin", "password123"); //We state the credentials in the order of username then password
 		
 		//Ship Scanner
 		System.out.println(ships);
