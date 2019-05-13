@@ -23,7 +23,14 @@ public class Weapon {
 	
 	public String display() {
 		StringBuilder sb = new StringBuilder();
-		
+		sb.append("\n        Weapon Name: " + weaponName);
+		sb.append("\n        Weapon Weight: " + weaponWeight);
+		sb.append("\n        Attack Rate: " + weaponAttacksPerMinute + " RPM");
+		sb.append("\n        Projectile Velocity: " + weaponProjectileVelocity + " metres/second");
+		sb.append("\n        Cooldown Rate: " + weaponCooldown + " seconds/attack");
+		sb.append("\n        Weapon Overheat Rate: " + weaponOverheat + " seconds of continued fire");
+		sb.append("\n        Weapon Range: " + weaponRange + " metres");
+		sb.append("\n        Damage Dropoff: " + weaponDamageDropoff + " damage lost/metre");
 		return sb.toString();
 	}
 }

@@ -15,15 +15,12 @@ public class AimDownSights extends Defence {
 	}
 	
 	public String display() {
-		StringBuilder sb = new StringBuilder("\n \n ACTIVE DEFENSE SYSTEM STATS:");
-		    sb.append("\n        Name: " + defenceName);
-		    sb.append("\n        Weight: " + defenceWeight);
-			sb.append("\n        Energy/Projectile: " + defenceEfficiency);
-			sb.append("\n        Response Time: " + ADSResponse + " seconds");
-			sb.append("\n        Accuracy: " + ADSAccuracy + " hits/100 shots");
+		StringBuilder sb = new StringBuilder("\n \nDEFENSE TYPE: ACTIVE DEFENSE SYSTEM");
+		    sb.append(super.display());  
+		    sb.append("\n        Response Time: " + ADSResponse + " seconds");
+			sb.append("\n        Accuracy: " + ADSAccuracy + " hits/100 shots") ;
 			sb.append("\n        Reload Time: " + ADSReload + " seconds");
 			sb.append("\n        Range: " + ADSRange + " miles");
-			
 			return sb.toString();
 	}
 }

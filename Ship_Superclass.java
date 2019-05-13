@@ -15,9 +15,17 @@ public class Ship_Superclass {
 		this.hull = hull;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
 	public String display() {
 		StringBuilder sb = new StringBuilder();
-		
+		sb.append("\n        Name: " + name);
+		sb.append("\n	Health: " + health);
+		sb.append("\n	Engine: " + engine.engineName);
+		sb.append("\n	Radar: " + radar.radarName);
+		sb.append("\n	Hull: " + hull.hullName);
 		return sb.toString();
 	}
 }

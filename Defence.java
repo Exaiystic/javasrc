@@ -13,7 +13,9 @@ public class Defence {
 	
 	public String display() {
 		StringBuilder sb = new StringBuilder();
-		
+		sb.append("\n        Name: " + defenceName);
+	    sb.append("\n        Weight: " + defenceWeight);
+		sb.append("\n        Energy/Projectile: " + defenceEfficiency);
 		return sb.toString();
 	}
 }

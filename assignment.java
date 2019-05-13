@@ -8,6 +8,8 @@ public class assignment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		ArrayList<Ship_Superclass> ships = new ArrayList<Ship_Superclass>(); //Array for ship scan - needs to include everything
+		
 		//  FOR TESTSHIP 1
 		Engine Speeder_Mk1 = new Voyager_Engine("Speeder Mk1", "Hydrogen", 100.0, 10.0, 50.0); 
 		Radar Spy_Mk1 = new Radar("Spy Mk1", 100.0, 5.0, 20);
@@ -18,28 +20,27 @@ public class assignment {
 		Defence Guardian_1 = new AimDownSights("Guardian Mk1", 5.0, 50.0, 11.0, 95.0, 3.0, 500.0);
 		
 		Fighter testShip = new Fighter("Test Ship", 100.0, Speeder_Mk1, Spy_Mk1, Kalvers_50mm, Suppressor_1, Plow_Missile_1, Guardian_1, Protector);
+		ships.add(testShip); //Adds testShip to the ships array
 		
-		//Printing information about testShip
-		System.out.println(testShip.display());
+		//User Login
+		Login admin = new Login();
+		admin.getLoginCredentials("admin", "password123");
 		
-	}
-
-}
+		//Ship Scanner
+		System.out.println(ships);
 		
-		/*
-		ArrayList<Ship_Superclass> ships = new ArrayList<Ship_Superclass>();
-		//ships.add(testShip);       Not needed for the search to work
-		Scanner scan = new Scanner(System.in);
-		String shipSearch = scan.nextLine();
-		System.out.println("SHIP FOUND: \n" + shipSearch);
-		scan.close();
-		for (Ship_Superclass s: ships) {
-			s.display();
+		System.out.println("Input the name of the ship:"); //Prompting user for ship nam
+		Scanner shipScan = new Scanner(System.in); //Creating a place for the input to be stores
+		String shipSearch = shipScan.nextLine(); //Getting the input and storing it
+		
+		for (Ship_Superclass s: ships) { //For loop saying "For as long as there are ships in Ship_Superclass
+			if (s.getName().equals(shipSearch)) { //If s is equal to searched ship then do the below:
+				System.out.println(s.display()); //Display the stats of the ship s
+			}
 			break;
 		}
-		scan.close();
+		
 	}
 
 }
 
-/*
