@@ -7,7 +7,7 @@ public class assignment {
 
 	public static void main(String[] args) {
 		//User Login
-		Login admin = new Login(); //Create a new login called admin
+		Login admin = new Login(); //Create a new login called admin.
 		admin.getLoginCredentials("admin", "password123"); //We state the credentials in the order of username then password
 		
 		shipSearch();
@@ -58,9 +58,17 @@ public class assignment {
 		System.out.println("Scan for another ship? Y/N");
 		Scanner retryScan = new Scanner(System.in); //Creating a place for the input to be stores
 		String retryInput = retryScan.nextLine(); //Getting the input and storing it
-		
+	    retryVerification(retryInput);
+	}
+   
+	public static void retryVerification(String retryInput) {
 		if (retryInput.equals("Y")) {
 			shipSearch();
+		} else if (retryInput.equals("N")) {
+			System.out.println("You have been logged out");
+		} else {
+			System.out.println("Please enter a either Y or N");
+			retryPrompt();
 		}
 	}
 }

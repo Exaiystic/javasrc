@@ -44,10 +44,8 @@ public class Login {
     	  
     	//If the username inputted is equal to the true username...
     	if (inputUsername.equals(username)) {
-    		
     		//If the username and password are both correct...
     		if (inputPassword.equals(password)) {
-    			
     			//Tell the user that they are correct and end the method
     			//Ending the method will allow them to progress onto searching for a ship
         		System.out.println("Password Correct");
@@ -55,17 +53,14 @@ public class Login {
         		
         	//If the username is correct but not the password...	
     		} else {
-    			
     			//Tell the user that the password is incorrect
     			//Forces the user to enter the username and password again
         		System.out.println("Password Incorrect");
         		System.out.println("Login Failed");
         		getLoginCredentials(username, password);
     		}
-    		
     	//If the username is incorrect...
     	} else {
-    		
     		//Tell the user that the username is incorrect
     		//Forces the user to enter the username and password again
     		System.out.println("Username Incorrect");
