@@ -17,7 +17,7 @@ public class Jump_Engine extends Engine {
 			sb.append("\n   Name: " + engineName);
 			sb.append("\n   Fuel Type: " + fuelType);
 			sb.append("\n   Maximum Speed: " + speed + "% of Light speed");
-			sb.append("\n   Energy Usage: " + energyUsage + " energy/Light Year");
+			sb.append("\n   Energy Usage: " + efficiency + " energy/Light Year");
 			sb.append("\n   Jump Charge Rate: " + jumpCharge + " light-years/second");
 			sb.append("\n   Jump Cooldown: " + cooldown + " seconds/light-years");
 			sb.append("\n   Maximum Jump Distance: " + maxJumpDistance + " Light Years");

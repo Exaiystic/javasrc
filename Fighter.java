@@ -17,6 +17,16 @@ public class Fighter extends Ship_Superclass {
 	public String display() {
 		StringBuilder sb = new StringBuilder("SHIP TYPE: FIGHTER");
 		sb.append(super.display());
+		sb.append("\n	Primary Weapon: " + primary.weaponName);
+		sb.append("\n	Secondary Weapon: " + secondary.weaponName);
+		sb.append("\n	Defence Mechanism: " + defence.defenceName);
+		sb.append("\n	Shield: " + shield.shieldName);
+		return sb.toString();
+	}
+	
+	public String displayExpand() {
+		StringBuilder sb = new StringBuilder("SHIP TYPE: FIGHTER");
+		sb.append(super.displayExpand());
 		sb.append(primary.display());
 		sb.append(secondary.display());
 		sb.append(defence.display());
