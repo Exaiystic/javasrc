@@ -36,6 +36,8 @@ public class assignment {
 		for (Ship_Superclass s: ships) { //For loop saying "For as long as there are ships in Ship_Superclass
 			if (s.getName().equals(shipSearch)) { //If s is equal to searched ship then do the below:
 				System.out.println(s.display()); //Display the stats of the ship s
+			} else {
+				System.out.println("NO SHIP DETECTED");
 			}
 			break;
 		}
