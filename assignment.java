@@ -81,7 +81,7 @@ public class assignment {
 		} else if (retryInput.equals("N")) {
 			System.out.println("You have been logged out");
 		} else {
-			System.out.println("Please enter a either Y or N");
+			System.out.println("Please enter either Y or N");
 			retryPrompt();
 		}
 	}
